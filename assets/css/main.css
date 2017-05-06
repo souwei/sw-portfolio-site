@@ -1,14 +1,16 @@
-body {
-	font-family: 'Cormorant Garamond', serif;
-
+.parallaxParent {
+	height: 100vh;
+	overflow: hidden;
 }
 
-
-
 .header{
-	display:flex;
-	justify-content: space-between;
-	padding:5px
+	position:fixed;
+	border:1px solid black;
+	width:100%;
+	left: 50%;
+    transform: translateX(-50%);
+    background-color:white;
+    z-index:1
 }
 
 .profile-name {
@@ -17,7 +19,7 @@ body {
 
 nav {
   display:inline;
-  justify-content: space-between;
+  float:right;
   margin-top:.5em;
 }
 
@@ -27,18 +29,8 @@ nav a {
 	color:black;
 }
 
-
-
 nav a:hover{
 	color:#D3D3D3;
-}
-
-.profile-sw {
-  display:inline;
-}
-
-.profile-sw img{
-  height:80px;
 }
 
 a:link{
@@ -46,16 +38,20 @@ a:link{
   color:black;
 }
 
-
-
-i {
-  margin-right: 2em;
-  padding:.2em;
+a:visited {
+	text-decoration:none;
+    color: black;
 }
 
 .social {
-	display:flex;
-	justify-content: center;
+	text-align: center;
+	position:fixed;
+	bottom: 0;
+    width: 100%;
+	border:1px solid black;
+	z-index:100;
+	opacity:1;
+	background-color: #FFFFFF;
 }
 
 .mail{
@@ -65,6 +61,8 @@ i {
 .linkedin{
 	color:#0073B1;
 }
+
+
 
 .hamburger{
 	color:#999;
@@ -77,30 +75,10 @@ i {
 	display:none;
 }
 
-.cross{
-  background:none;
-  top:0px;
-  right:0;
-  color:#999;
-  border:0;
-  font-size:3em;
-  height:.5em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
 
-}
-
-.mini-nav{
-	display:flex;
-	flex-direction: column;
-	background-color:white;
-}
-
-.link{
-	text-align: center;
-	font-size:1.5em;
+i {
+  margin-right: 2em;
+  padding:.2em;
 }
 
 .social i:hover{
@@ -108,38 +86,160 @@ i {
     filter: alpha(opacity=50);
 }
 
+.cross{
+	background:none;
+	top:0px;
+	right:0;
+	color:#999;
+	border:0;
+	font-size:3em;
+	height:.5em;
+	font-weight:bold;
+	cursor:pointer;
+	outline:none;
+	display:none;
+
+}
+
 .main-content{
-	background: url('../images/blur-1867166_1280.jpg');
+	background: url('../images/blurred.png');
 	background-repeat: no-repeat;
 	background-size:cover;
 	width:100%;
-	height:80vh;
+	height:95vh;
+
 }
 
 .information{
-	text-align:center;
-	height:30%;
-	width:50%;
-	margin:0 auto;
-	color:white;
-	font-size:2em;
-}
+	text-align: center;
 
-.greetings{
-	font-size:3em;
-}
-
-.current-nav{
-	color:grey;
-	text-decoration: overline;
-	font-size:2.3em;
 }
 
 .profile-photo{
-	  border-radius: 50%;
-	  width:40%;
-	  height:auto;
+	margin-top:10em;
+	border-radius: 60%;
+	width:20%;
+	height:auto;
+
 }
+
+h1 {
+	font-size:5em;
+}
+
+h2{
+	font-size:4em;
+}
+
+h3 {
+	font-size:3em;
+	margin-bottom:2em;
+}
+
+p{
+	font-size:1.8em;
+}
+
+.p-content{
+	text-align: center;
+}
+
+.p-content h2{
+	margin:.5em;
+}
+
+.p-content ul li{
+	font-size:2.8em;
+	padding:.3em;
+}
+
+.p-content ul li:hover{
+	font-family: 'VT323', monospace;
+	color:#ffff00 ;
+}
+
+.p-1{
+	height:70vh;
+	color:white;
+	background: #232526;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.p-2{
+	background-image:url('../images/apple-1841281_1280.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	width:100%;
+}
+
+.p-3{
+	height:260vh;
+	background:#CCCCCC;
+	color:#333;
+}
+.project-item{
+	display: flex;
+	justify-content: center;
+	height:400px;
+}
+
+.projects{
+	width:65%;
+	margin:0 auto;
+}
+
+.project-item-description{
+	margin-left:2em;
+	text-align: left;
+}
+.project-item-description h3{
+	margin-bottom:.5em;
+}
+
+.project-item img:hover{
+	opacity:1;
+
+}
+
+.img{
+	width:35%;
+
+}
+
+.img img{
+	width:85%;
+	height:80%;
+	opacity:0.5;
+	border-radius:15%;
+}
+
+.projects a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.project-item-description{
+	width:65%;
+}
+
+.tools{
+	display:flex;
+	justify-content: space-around;
+}
+
+.tools div{
+	margin-top:2em;
+	 width: 15%;
+  	margin: .5vw;
+}
+
+.tools div img{
+	 width: 100%;
+  height: auto;
+}
+
 
 @media only screen and (max-width: 600px) {
     nav{

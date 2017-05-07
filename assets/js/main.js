@@ -1,22 +1,19 @@
-// $('.cross').hide();
-// $('.mini-nav').hide();
-// $('.hamburger').hide();
-//
-// $( '.hamburger' ).click(function() {
-//     $( ".mini-nav" ).slideToggle( "fast", function() {
-// 	$( ".hamburger" ).hide();
-// 	$( ".cross" ).show();
-// 	});
-//   });
-//
-// $('.cross').click(function(){
-//  $( ".mini-nav" ).slideUp( "fast", function() {
-// 	$( ".cross" ).hide();
-// 	$( ".hamburger" ).show();
-// 	});
-// });
-//
-//
+//Burger nav
+$('.cross').hide();
+$('nav').hide();
+
+$( '.hamburger' ).click(function() {
+  $( ".hamburger" ).hide();
+  $( ".cross" ).show();
+  $("nav").toggle("slide");
+});
+
+$('.cross').click(function(){
+  $( ".cross" ).hide();
+  $( ".hamburger" ).show();
+  $("nav").toggle("slide");
+});
+
 // // media query event handler
 // if (matchMedia) {
 //   var mq = window.matchMedia("(min-width: 600px)");

@@ -7,10 +7,11 @@
 	position:fixed;
 	border:1px solid black;
 	width:100%;
-	left: 50%;
-    transform: translateX(-50%);
-    background-color:white;
-    z-index:1
+	display: flex;
+	justify-content: space-between;
+  background-color:white;
+  z-index:1;
+  height:6.15%;
 }
 
 .profile-name {
@@ -58,23 +59,24 @@ a:visited {
 	color:#FF0000;
 }
 
-.linkedin{
-	color:#0073B1;
+.nav-panel{
+	display:flex;
+	justify-content: flex-end;
 }
-
-
 
 .hamburger{
 	color:#999;
 	background-color:white;
 	border:0;
-	font-size:1.4em;
+	font-size:2em;
 	font-weight:bold;
 	cursor:pointer;
 	outline:none;
-	display:none;
 }
 
+.linkedin{
+	color:#0073B1;
+}
 
 i {
   margin-right: 2em;
@@ -102,12 +104,7 @@ i {
 }
 
 .main-content{
-	background: url('../images/blurred.png');
-	background-repeat: no-repeat;
-	background-size:cover;
-	width:100%;
 	height:95vh;
-
 }
 
 .information{
@@ -167,7 +164,7 @@ p{
 }
 
 .p-2{
-	background-image:url('../images/apple-1841281_1280.jpg');
+	background-image:url('../images/fd.jpg');
 	background-repeat: no-repeat;
 	background-size:cover;
 	width:100%;
@@ -193,13 +190,18 @@ p{
 	margin-left:2em;
 	text-align: left;
 }
+
+.project-item-description p{
+	font-size:1.5em;
+}
+
 .project-item-description h3{
+	font-size:2em;
 	margin-bottom:.5em;
 }
 
 .project-item img:hover{
 	opacity:1;
-
 }
 
 .img{

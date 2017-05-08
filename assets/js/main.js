@@ -73,3 +73,18 @@ $('a[href*="#"]')
       }
     }
   });
+
+  document.addEventListener('DOMContentLoaded', function(){
+	Typed.new('.greet', {
+        strings: ["HELLO."],
+        typeSpeed: 50,
+        showCursor: false,
+    });
+  setTimeout(function() {
+    Typed.new('.intro', {
+        strings: ["I am Soul Wong, a Web Developer passionate about technology, video games and basketball."],
+        typeSpeed: 20,
+        showCursor: true,
+    });
+	}, 1200);
+});

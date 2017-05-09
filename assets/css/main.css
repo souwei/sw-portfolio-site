@@ -98,8 +98,7 @@ i {
 	right:0;
 	color:#999;
 	border:0;
-	font-size:3em;
-	height:.5em;
+	font-size:5em;
 	font-weight:bold;
 	cursor:pointer;
 	outline:none;
@@ -269,6 +268,11 @@ and (max-device-width : 667px) {
 	height:55%;
 	opacity:0.5;
 	border-radius:15%;
+	}
+
+	nav{
+		font-size:.8em;
+		margin-top:2.5em;
 	}
 }
 
